@@ -49,9 +49,9 @@
             padding: 1rem;
             max-width: 30em;
             background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: rgba(100, 148, 148, 0.2) 0.2em 0.2em 1em;
+            box-shadow: rgba(100, 148, 148, 0.7) 0.1em 0.1em 1em;
             border: 0.1rem solid rgba(240, 23, 60, 1);
-            border-radius: 0.2rem;
+            border-radius: 0.4rem;
         }
 
         h1 {
@@ -60,42 +60,38 @@
             text-align: center;
             color: #fff;
             background-color: rgba(240, 23, 60, 1);
+            text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.2em;
         }
 
         form {
             display: block;
         }
 
-        form label {
-            display: block;
+        label {
             font-weight: bold;
-            margin: 1rem 0 0.2rem 0;
+            background-color: rgba(112, 206, 195, 0.25);
         }
 
-        form .field {
+        form input,
+        form button {
+            display: block;
+            font-size: 1rem;
+            padding: 0.5rem;
             margin: 0.5rem 0;
+            width: 100%;
+            text-align: center;
         }
 
         form input {
-            display: block;
-            padding: 0.5rem;
-            font-size: 1rem;
             border: 1px solid #ccc;
-            border-radius: 0.2rem;
-        }
-
-        form select {
-            display: inline-block;
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 0.2rem;
+            border-radius: 0.3rem;
         }
 
         form button {
             font-weight: bold;
-            display: block;
             padding: 1rem 1rem;
+            color: #fff;
+            text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.2em;
             background-color: rgba(112, 206, 195, 1);
             border-radius: 0.2rem;
             border-top-color: rgba(255, 255, 255, 0.5);
@@ -118,48 +114,18 @@
                 <h1>Super Secret North Pole Headquarters<br>🎄🎄🎄</h1>
             </header>
             <div class="patter">
-                <p>If you've been good this year but you're traveling far away from
-                    home on Christmas, Santa Clause will sometimes drop your presents
-                    off at your house so you don't need your own team of reindeer to
-                    carry them back home with you!</p>
+                <p>If you've been good this year but you're traveling far away
+                    from home on Christmas, Santa Claus 🎅🏼 will sometimes drop your
+                    presents off at your house so you don't need your own team of
+                    reindeer 🦌🦌🦌🦌🦌🦌🦌🦌🦌🛷 to carry them back home with you!</p>
 
-                <p>To see if he left any presents at your house, enter your name
-                    and birthday below:</p>
+                <p>To see if he left any presents at your house, ask a parent
+                    for your special <label for="password">North Pole
+                        Password</label>:</p>
             </div>
             <form>
-                <div class="field">
-                    <label for="name">Your name and birthday</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="field">
-                    <select id="month" name="month" required>
-                        <option value="">Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <select id="day" name="day" required>
-                        <option value="">Day</option>
-                        <!-- Options 1 through 31 -->
-                        <script>
-                            for (let i = 1; i <= 31; i++) {
-                                document.write(`<option value="${i}">${i}</option>`);
-                            }
-                        </script>
-                    </select>
-                </div>
-                <div class="field">
-                    <button type="submit">🚀 Go!</button>
-                </div>
+                <input type="password" id="password" name="password" placeholder="Your password" required>
+                <button type="submit">🚀&nbsp;&nbsp;&nbsp;See your presents!&nbsp;&nbsp;&nbsp;🚀</button>
             </form>
         </section>
     </main>
