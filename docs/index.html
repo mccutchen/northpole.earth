@@ -3,6 +3,8 @@
 
 <head>
     <title>Santa's Super Secret North Pole Headquarters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <style>
         * {
             box-sizing: border-box;
@@ -21,8 +23,22 @@
 
             background-image: url('santa.png');
             background-position: bottom right;
-            background-size: contain;
             background-repeat: no-repeat;
+            background-size: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background-size: 60%;
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-size: 100%;
+            }
         }
     </style>
 </head>
