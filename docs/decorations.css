@@ -51,7 +51,7 @@ main.login {
 }
 
 main.gift {
-    max-width: 30em;
+    max-width: 40em;
     margin: 1rem auto;
 }
 
@@ -108,7 +108,7 @@ code {
 
 p {
     line-height: 1.4;
-    text-shadow: rgba(255, 255, 255, 1) 0 0 0.3em;
+    text-shadow: rgba(255, 255, 255, 1) 0 0 20px;
 }
 
 figure {
@@ -118,6 +118,7 @@ figure {
 
 figure div {
     border: 0.5rem solid rgba(240, 23, 60, 1);
+    border-radius: 0.3rem;
 }
 
 figure img {
@@ -140,4 +141,11 @@ figure img {
     position: relative;
     right: 50%;
     width: 100vw;
+}
+
+p.signature img {
+    display: block;
+    max-width: 60%;
+    /* border: 1px solid red; */
+    margin-top: -3.5rem;
 }
