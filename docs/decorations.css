@@ -116,6 +116,14 @@ p {
     text-shadow: rgba(255, 255, 255, 1) 0 0 20px;
 }
 
+#error {
+    display: none;
+    color: rgba(240, 23, 60, 1);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
 figure {
     margin: 0;
     padding: 0 1rem;

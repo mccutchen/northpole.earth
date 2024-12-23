@@ -24,12 +24,33 @@
                     for your special <label for="password">North Pole
                         Password</label>:</p>
             </div>
-            <form>
+            <form id="login">
                 <input type="password" id="password" name="password" placeholder="Your password" required>
                 <button type="submit">🚀&nbsp;&nbsp;&nbsp;See your presents!&nbsp;&nbsp;&nbsp;🚀</button>
             </form>
+            <p id="error">
+                Oops, that password is incorrect. Make sure your parents got the right password from Santa and try
+                again!
+            </p>
         </section>
     </main>
+
+    <script>
+        const passwordLookup = {
+            "special kei": "/81f03f5cd1.html", // echo "special kei" | shasum -a 256 | head -c 10
+        };
+
+        document.getElementById('login').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const passwordInput = document.getElementById('password').value.toLowerCase().trim();
+            let dest = passwordLookup[passwordInput];
+            if (dest === undefined) {
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+            window.location.href = dest;
+        });
+    </script>
 </body>
 
 </html>
