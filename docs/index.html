@@ -38,12 +38,15 @@
 
     <script>
         const passwordLookup = {
-            "special kei": "/81f03f5cd1.html", // echo "special kei" | shasum -a 256 | head -c 10
+            "specialkei": "/81f03f5cd1.html", // echo "special kei" | shasum -a 256 | head -c 10
         };
-
         document.getElementById('login').addEventListener('submit', function (event) {
             event.preventDefault();
-            const passwordInput = document.getElementById('password').value.toLowerCase().trim();
+            const passwordInput = document.getElementById('password')
+                .value
+                .trim()
+                .toLowerCase()
+                .replace(" ", "");
             let dest = passwordLookup[passwordInput];
             if (dest === undefined) {
                 document.getElementById('error').style.display = 'block';
