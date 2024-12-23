@@ -55,6 +55,11 @@ main.gift {
     margin: 1rem auto;
 }
 
+main.coal {
+    max-width: 40em;
+    margin: 1rem auto;
+}
+
 h1 {
     margin: -1rem -1rem 1rem -1rem;
     padding: 1rem 0.5rem;
@@ -148,4 +153,10 @@ p.signature img {
     max-width: 60%;
     /* border: 1px solid red; */
     margin-top: -3.5rem;
+}
+
+.coal img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
