@@ -81,6 +81,7 @@ form button {
 form input {
     border: 1px solid #ccc;
     border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 form button {
@@ -89,7 +90,7 @@ form button {
     color: #fff;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.2em;
     background-color: rgba(112, 206, 195, 1);
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     border-top-color: rgba(255, 255, 255, 0.5);
     border-left-color: rgba(255, 255, 255, 0.5);
     border-bottom-color: rgba(0, 0, 0, 0.5);
