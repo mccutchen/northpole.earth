@@ -12,15 +12,10 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     color: #333;
-
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 1rem;
-    /* background-image: url('santa.png');
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
 }
 
 body::before {
@@ -97,11 +92,6 @@ form button {
     border-left-color: rgba(255, 255, 255, 0.5);
     border-bottom-color: rgba(0, 0, 0, 0.5);
     border-right-color: rgba(0, 0, 0, 0.5);
-}
-
-code {
-    /* Monospace system fonts as used by GitHub */
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 p {
@@ -189,4 +179,8 @@ p.signature img {
         margin-top: -3rem;
         max-width: 100%;
     }
+}
+
+p.bottom-padding {
+    margin: 0;
 }
