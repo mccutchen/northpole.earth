@@ -5,115 +5,12 @@
     <title>Santa's Super Secret North Pole Headquarters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            height: 100%;
-            width: 100%;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            color: #333;
-
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-
-            background-image: url('santa.png');
-            background-position: bottom right;
-            background-repeat: no-repeat;
-            background-size: auto;
-            margin: 0;
-            padding: 0;
-        }
-
-        @media (orientation: landscape) {
-            body {
-                background-size: 60%;
-            }
-        }
-
-        @media (orientation: portrait) {
-            body {
-                background-size: 100%;
-            }
-        }
-
-        main {
-            margin: 1rem;
-            padding: 1rem;
-            max-width: 30em;
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: rgba(100, 148, 148, 0.7) 0.1em 0.1em 1em;
-            border: 0.1rem solid rgba(240, 23, 60, 1);
-            border-radius: 0.4rem;
-        }
-
-        h1 {
-            margin: -1rem -1rem 1rem -1rem;
-            padding: 1rem 0.5rem;
-            text-align: center;
-            color: #fff;
-            background-color: rgba(240, 23, 60, 1);
-            text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.2em;
-        }
-
-        form {
-            display: block;
-        }
-
-        label {
-            font-weight: bold;
-            background-color: rgba(112, 206, 195, 0.25);
-        }
-
-        form input,
-        form button {
-            display: block;
-            font-size: 1rem;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        form input {
-            border: 1px solid #ccc;
-            border-radius: 0.3rem;
-        }
-
-        form button {
-            font-weight: bold;
-            padding: 1rem 1rem;
-            color: #fff;
-            text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.2em;
-            background-color: rgba(112, 206, 195, 1);
-            border-radius: 0.2rem;
-            border-top-color: rgba(255, 255, 255, 0.5);
-            border-left-color: rgba(255, 255, 255, 0.5);
-            border-bottom-color: rgba(0, 0, 0, 0.5);
-            border-right-color: rgba(0, 0, 0, 0.5);
-        }
-
-        code {
-            /* Monospace system fonts as used by GitHub */
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
-
-        p {
-            line-height: 1.4;
-        }
-    </style>
+    <link rel="stylesheet" href="decorations.css">
 </head>
 
 <body>
-    <main>
-        <section id="login">
+    <main class="login">
+        <section>
             <header>
                 <h1>Super Secret North Pole Headquarters<br>🎄🎄🎄</h1>
             </header>
