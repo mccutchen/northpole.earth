@@ -5,6 +5,8 @@
 html {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -14,50 +16,41 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
-
-    background-image: url('santa.png');
+    padding: 1rem;
+    /* background-image: url('santa.png');
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
+    background-attachment: fixed; */
 }
 
-@media (orientation: landscape) {
-    body {
-        background-size: 60%;
-    }
-}
-
-@media (orientation: portrait) {
-    body {
-        background-size: 100%;
-    }
+body::before {
+    /*
+        hack a fixed background image that works on desktop browsers and in
+        mobile safari (where fixed backgrounds on the body element are
+        apparently broken), based on:
+        - https://jsfiddle.net/saeokn81/
+        - https://www.reddit.com/r/csshelp/comments/1cefzv4/trying_to_get_a_fixed_background_on_mobile/
+    */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(santa.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 main {
-    margin: 1rem;
+    margin: 0 auto;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: rgba(100, 148, 148, 0.7) 0.1em 0.1em 1em;
     border: 0.1rem solid rgba(240, 23, 60, 1);
     border-radius: 0.4rem;
-}
-
-main.login {
-    max-width: 30em;
-}
-
-main.gift {
     max-width: 40em;
-    margin: 1rem auto;
-}
-
-main.coal {
-    max-width: 40em;
-    margin: 1rem auto;
 }
 
 h1 {
@@ -167,4 +160,33 @@ p.signature img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+}
+
+@media (orientation: landscape) {
+    body::before {
+        background-size: 60%;
+    }
+}
+
+@media (orientation: portrait) {
+    body::before {
+        background-size: 100%;
+    }
+
+    figure {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    figure div,
+    figure img {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    p.signature img {
+        margin-top: -3rem;
+        max-width: 100%;
+    }
 }
